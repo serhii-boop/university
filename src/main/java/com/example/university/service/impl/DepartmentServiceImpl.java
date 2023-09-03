@@ -57,8 +57,6 @@ public class DepartmentServiceImpl implements DepartmentService {
             return String.format(DEPARTMENT_NOT_FOUND, departmentName);
         }
         return String.format(AVG_DEPARTMENT_SALARY_ANSWER, departmentName, avgSalary.getAsDouble());
-
-
     }
 
     @Override

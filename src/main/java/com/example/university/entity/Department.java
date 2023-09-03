@@ -14,12 +14,14 @@ import jakarta.persistence.NamedEntityGraph;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
 @Data
+@Builder
 @Entity
 @Table(name = "departments")
 @AllArgsConstructor

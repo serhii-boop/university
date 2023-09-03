@@ -19,7 +19,7 @@ public class UniversityServiceFactory {
     private Map<Pattern, Function<String, String>> commandPattern;
 
     @PostConstruct
-    void init() {
+    void initCommandPatterns() {
         commandPattern = Map.of(
                 Pattern.compile("Who is head of department (.+)"), departmentService::getHeadOfDepartment,
                 Pattern.compile("Show (.+) statistics"), departmentService::getDepartmentStatistics,
