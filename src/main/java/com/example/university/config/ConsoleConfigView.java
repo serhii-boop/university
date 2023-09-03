@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class ConsoleConfigView {
 
     private final UniversityServiceFactory universityServiceFactory;
+    private static final String EXIT_COMMAND = "0";
 
     public void startApp() {
         Scanner scanner = new Scanner(System.in);
@@ -19,7 +20,7 @@ public class ConsoleConfigView {
         while (!exit) {
             printMainMenu();
             String command = scanner.nextLine();
-            if ("0".equals(command)) {
+            if (EXIT_COMMAND.equals(command)) {
                 exit = true;
             } else {
                 System.out.println(universityServiceFactory.executeCommand(command));
